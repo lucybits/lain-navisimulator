@@ -1,0 +1,168 @@
+/* Full height y fondo */
+html,
+body {
+  background: #1e2430;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Inconsolata', monospace;
+}
+
+/* Contenedor del video */
+.boot-video-container {
+  top: -120px;
+  width: 50vw;
+  height: 60vh;
+  background: #1e2430;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Video en sí */
+.boot-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  z-index: 1;
+}
+
+/* Overlay con texto y barra */
+.boot-overlay {
+  position: absolute;
+  bottom: 1vh;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+  pointer-events: none;
+  font-family: 'Inconsolata', monospace;
+}
+
+.progress-bar {
+  width: 80%;
+  height: 13px;
+  background: rgba(255, 255, 255, 0.05);
+  margin: 0 auto;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.progress-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.8) 0%,
+    #fff 50%,
+    rgba(255, 255, 255, 0.8) 100%
+  );
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.2);
+  transition: width 0.08s steps(12);
+  clip-path: polygon(
+    0 0,
+    calc(100% - 4px) 0,
+    100% 50%,
+    calc(100% - 4px) 100%,
+    0 100%
+  );
+}
+
+.progress-text {
+  color: white;
+  font-family: 'Inconsolata', monospace;
+  font-size: 16px;
+  margin-top: 8px;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.7),
+    0 0 10px rgba(255, 255, 255, 0.5), 0 0 15px rgba(255, 255, 255, 0.3);
+  position: absolute;
+  right: 10%;
+  bottom: -30px;
+  letter-spacing: 2px;
+}
+
+.info-box {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #000033;
+  border-top: 1px solid #0066cc;
+  padding: 8px;
+  pointer-events: auto;
+  z-index: 10;
+  text-align: center;
+  font-family: 'Inconsolata', monospace;
+}
+
+.info-content {
+  font-family: 'Inconsolata', monospace;
+  color: #00ccff;
+  text-align: center;
+  padding: 8px;
+  background: #000044;
+  border: 1px solid #003399;
+}
+
+.info-content p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #33ccff;
+  line-height: 1.4;
+  font-family: 'Inconsolata', monospace;
+}
+
+.info-links {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 6px;
+  padding: 4px;
+  font-family: 'Inconsolata', monospace;
+}
+
+.info-links a {
+  color: #99ffff;
+  text-decoration: none;
+  font-size: 12px;
+  padding: 3px 8px;
+  border: 1px solid #0099ff;
+  background: #000044;
+  transition: all 0.2s ease;
+  font-family: 'Inconsolata', monospace;
+  text-transform: uppercase;
+}
+
+.info-links a:hover {
+  background: #000066;
+  color: #ccffff;
+  border-color: #00ccff;
+}
+
+.info-description {
+  margin-top: 10px;
+  padding: 3px;
+  font-size: 10px;
+  color: #33ccff;
+  line-height: 1.4;
+  width: 900px;
+  font-family: 'Inconsolata', monospace;
+}
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  font-family: 'Inconsolata', monospace;
+}

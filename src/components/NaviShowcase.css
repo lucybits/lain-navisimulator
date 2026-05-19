@@ -1,0 +1,83 @@
+  .navi-showcase {
+    width: 100%;
+    height: 100vh;
+    animation: glitch 4s infinite;
+  }
+
+  .showcase-header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    animation: scanline 12s linear infinite;
+  }
+
+  .header-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .header-mask img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: blur(15px) hue-rotate(60deg) contrast(150%);
+    image-rendering: pixelated;
+    opacity: 0.8;
+    animation: crt-flicker 0.3s infinite;
+  }
+
+  .sticker {
+    width: 800px;
+    height: auto;
+    opacity: 0.5;
+    mix-blend-mode: screen;
+    pointer-events: none;
+    image-rendering: pixelated;
+    animation: float 12s ease-in-out infinite;
+  }
+
+  .sticker-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @keyframes glitch {
+    0% { transform: translate(0) }
+    20% { transform: translate(-2px, 2px) }
+    40% { transform: translate(-2px, -2px) }
+    60% { transform: translate(2px, 2px) }
+    80% { transform: translate(2px, -2px) }
+    100% { transform: translate(0) }
+  }
+
+  @keyframes scanline {
+    0% { background: linear-gradient(to bottom, transparent 50%, rgba(0, 255, 255, 0.05) 50%); background-size: 100% 4px; }
+    100% { background: linear-gradient(to bottom, transparent 50%, rgba(0, 255, 255, 0.05) 50%); background-size: 100% 4px; }
+  }
+
+  @keyframes crt-flicker {
+    0% { opacity: 0.8; }
+    50% { opacity: 0.86; }
+    100% { opacity: 0.8; }
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0px) }
+    50% { transform: translateY(-10px) }
+    100% { transform: translateY(0px) }
+  }
+ 
+  
