@@ -23,9 +23,8 @@ The project focuses on recreating low-level interface aesthetics through a compo
 Install dependencies:
 
 ```bash
-```
-
 npm install
+```
 
 # React + Vite
 
