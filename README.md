@@ -1,22 +1,24 @@
+
 # Lain Navi Simulator
 
-Frontend simulation project inspired by the NAVI systems from Serial Experiments Lain.
+Frontend interface experiment inspired by NAVI systems and early network-era UI design.
+By Tachibana Labs
 
-The project focuses on recreating low-level interface aesthetics through a component-driven architecture using React. Entails animated  terminal-style rendering and interaction patterns... to emulate an experimental desktop environment
+Built with React and Vite using a component-based structure focused on animated rendering and terminal-style interaction patterns.
 
-## Stack
+## Tech stack
 
 - React
 - Vite
 - JavaScript
 - CSS3
 
-## Current features
+## Current implementation
 
-- Modular UI component structure
-- Reactive state-driven interface behavior
-- Animated transitions and layered effects
-- Terminal-inspired interaction system
+- Component-driven UI structure
+- Dynamic interface rendering
+- Animated transitions
+- Responsive layout behavior
 
 ## Development
 
