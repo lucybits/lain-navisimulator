@@ -6,7 +6,7 @@ The project focuses on recreating low-level interface aesthetics through a compo
 
 ## Stack
 
-- Svelte
+- React
 - Vite
 - JavaScript
 - CSS3
